@@ -17,7 +17,9 @@
 	warnifnoissue = false
 
 
-	### Fallback! For users without TurtleHub: Comment out the 'provider*' properties above! 
+	### Fallback! For users without TurtleHub: 
+	# Either comment out the 'provider*' properties above!
+	# Or overwrite on local scope with empty fields.
 	# An input box will appear instead. It's content will be inserted with this syntax:
 	message = "dail8859/TurtleHub#%BUGID%"
 	append = true

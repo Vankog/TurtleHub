@@ -125,14 +125,16 @@ short and extended issue notations.
     warnifnoissue = false
   ```
 * The other properties are ignored if TurtleHub is installed. However, *if the IBugTraqProvider properties are not set 
-(or commented out)*, these still might be useful to provide for other project contributors without TurtleHub. If so, an 
+(or commented out)*, an 
 edit box appears at the top right hand side instead. There, issue numbers can be inserted manually. Check TortoiseGit's 
 *Help* documentation for further information.
 
   ![TH-no-TH-fallback](/img/TH-no-TH-fallback.png)
   ```
   [bugtraq]
-    ### Fallback! For users without TurtleHub: Comment out the 'provider*' properties above! 
+    ### Fallback! For users without TurtleHub: 
+    # Either comment out the 'provider*' properties above!
+    # Or overwrite on local scope with empty fields.
     # An input box will appear instead. It's content will be inserted with this syntax:
     message = "dail8859/TurtleHub#%BUGID%"
     append = true
@@ -143,7 +145,18 @@ edit box appears at the top right hand side instead. There, issue numbers can be
     # The typed issue / pull request IDs must be numbers:
     number = true
   ```
+* All properties can be overwritten on a lower scope, without changing the original higher order config file. For example:
+If the project scope's `.tgitconfig` file declares the following properties:
 
+    ![TH-inherit-project](/img/TH-inherit-project.png)
+    
+    They can be easily overwritten locally:
+    
+    ![TH-inherit-local-overwrite](/img/TH-inherit-local-overwrite.png)
+    
+    This way users without TurtleHub can disable the IBugTraqProvider properties to enable the edit field fallback. 
+    They might also change the Keyword or the warning. This way a personal config can be achieved without the need to 
+    change the project-scope config.
 
 ## Usage
 When committing, the issue chooser should appear at the top right of the dialog. Open it and let TurtleHub fetch the 
