@@ -1,6 +1,6 @@
 # TurtleHub
 [TortoiseGit](https://tortoisegit.org/) issue tracker plugin for projects hosted on GitHub. Release versions can be 
-downloaded on the [Release](/releases) page.
+downloaded on the [Release](../../releases) page.
 
 ![TH-issue-overview](/docs/img/TH-issue-overview.png  "Example of TurtleHub's issue picker.")
 
@@ -110,11 +110,10 @@ issue number goes. e.g.
 * If `bugtraq.warnifnoissue` es enabled, it checks your current commit for issue numbers and warns you if you don't 
 provide one when committing.
 * Feel free to use this RegEx for `bugtraq.logregex`:  
-        ```regex
-                (?:\S+\/\S+)?#(\d+)
-        ```  
-        It will link against the 
-short and extended issue notations.
+    ```regex
+    (?:\S+\/\S+)?#(\d+)
+    ```
+    It will link against the short and extended issue notations.
   ```
   [bugtraq]
     ### general BugTraq config ###
