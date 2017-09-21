@@ -1,8 +1,8 @@
 # TurtleHub
 [TortoiseGit](https://tortoisegit.org/) issue tracker plugin for projects hosted on GitHub. Release versions can be 
-downloaded on the [Release](https://github.com/dail8859/TurtleHub/releases) page.
+downloaded on the [Release](/releases) page.
 
-![TH-issue-overview](/img/TH-issue-overview.png)
+![TH-issue-overview](/docs/img/TH-issue-overview.png  "Example of TurtleHub's issue picker.")
 
 **Note:** This project is not affiliated with or endorsed by GitHub, Inc.
 
@@ -51,8 +51,8 @@ downloaded on the [Release](https://github.com/dail8859/TurtleHub/releases) page
     is completely customizable. If you don't want to use Github's auto-close feature every time, simply choose `<None>` 
     or - after closing the Options dialog - edit the `Parameters` field `keyword=` manually to whatever you like.
     
-        ![TH-options](/img/TH-options.png)
-        ![TH-config-keyword](/img/TH-config-keyword.png)
+        ![TH-options](/docs/img/TH-options.png "Options Dialog")
+        ![TH-config-keyword](/docs/img/TH-config-keyword.png "Keyword parameter")
     1. *Reference Full Repository Name* enables the extended notation when inserting the issue number into the log 
     message. This is needed if the repository you are pushing to is not on the same repository as the issues or pull 
     requests you are referencing. This means: Github parses the short notation `#1234` assuming the current repository. 
@@ -63,7 +63,7 @@ downloaded on the [Release](https://github.com/dail8859/TurtleHub/releases) page
     referencing. Please note, as you usually only have read rights on external repositories, you might want to remove 
     or replace the `Closes` (or equivalent) keyword. (see previous screenshot)
     
-        ![TH-options-external-repo](/img/TH-options-external-repo.png)
+        ![TH-options-external-repo](/docs/img/TH-options-external-repo.png "Referencing whole Repository")
 
 ### b) BugTraq Integration
 #### Steps: 
@@ -80,10 +80,10 @@ UUIDs (a.k.a. GUIDs) and parameters for TurtleHub (e.g. from the previous step).
     1. The 64-bit UUID is: `{B2C6EC0F-8742-4792-9FDC-10635D2C118B}`
     1. Feel free to add both UUIDs if you want to share your config.
     
-    ![TH-BugTraq-Plugin](/img/TH-BugTraq-Plugin.png)
+    ![TH-BugTraq-Plugin](/docs/img/TH-BugTraq-Plugin.png "TurtleHub in BugTraq")
 1. Now you can delete your *Local Integration* entry from `Issue Tracker Integration` again, if you did create one.
 1. You can share/commit your BugTraq git config (e.g. `.tgitconfig` file on `Project` scope). 
-For an example, see [our own BugTraq config](.tgitconfig): 
+For an example, see [our own BugTraq config](./.tgitconfig): 
   ```
   [bugtraq]
     ### TurtleHub specific config
@@ -98,18 +98,22 @@ If you look into the example file above or at the screenshots, you can see furth
 These are independent from TurtleHub. For more information about what they are and how to use them, use the `Help` 
 button at the bottom: 
 
-![TH-BugTraq-general](/img/TH-BugTraq-general.png)
+![TH-BugTraq-general](/docs/img/TH-BugTraq-general.png "General BugTraq config")
 
 Their main purpose is to provide links on issue numbers when browsing log messages in TurtleHub. They link to the 
 issue's URL on the tracker: 
 
-![TH-BugTraq-link](/img/TH-BugTraq-link.png)
+![TH-BugTraq-link](/docs/img/TH-BugTraq-link.png "Example of BugTraq issue linking")
 * Make sure `bugtraq.url` refers to the tracker URL you want to refer to and add `%BUGID` in place of where the 
 issue number goes. e.g.
 `https://github.com/dail8859/TurtleHub/issues/%BUGID%`
 * If `bugtraq.warnifnoissue` es enabled, it checks your current commit for issue numbers and warns you if you don't 
 provide one when committing.
-* Feel free to use this RegEx for `bugtraq.logregex`: `(?:\S+\/\S+)?#(\d+)` It will link against the 
+* Feel free to use this RegEx for `bugtraq.logregex`:  
+        ```regex
+                (?:\S+\/\S+)?#(\d+)
+        ```  
+        It will link against the 
 short and extended issue notations.
   ```
   [bugtraq]
@@ -129,7 +133,7 @@ short and extended issue notations.
 edit box appears at the top right hand side instead. There, issue numbers can be inserted manually. Check TortoiseGit's 
 *Help* documentation for further information.
 
-  ![TH-no-TH-fallback](/img/TH-no-TH-fallback.png)
+  ![TH-no-TH-fallback](/docs/img/TH-no-TH-fallback.png "BugTraq issue insertion without TurtleHub")
   ```
   [bugtraq]
     ### Fallback! For users without TurtleHub: 
@@ -148,11 +152,11 @@ edit box appears at the top right hand side instead. There, issue numbers can be
 * All properties can be overwritten on a lower scope, without changing the original higher order config file. For example:
 If the project scope's `.tgitconfig` file declares the following properties:
 
-    ![TH-inherit-project](/img/TH-inherit-project.png)
+    ![TH-inherit-project](/docs/img/TH-inherit-project.png "BugTraq properties on project scope")
     
     They can be easily overwritten locally:
     
-    ![TH-inherit-local-overwrite](/img/TH-inherit-local-overwrite.png)
+    ![TH-inherit-local-overwrite](/docs/img/TH-inherit-local-overwrite.png "Overwrite BugTraq properties on local scope")
     
     This way users without TurtleHub can disable the IBugTraqProvider properties to enable the edit field fallback. 
     They might also change the Keyword or the warning. This way a personal config can be achieved without the need to 
