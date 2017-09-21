@@ -1,6 +1,6 @@
 #Table of Contents:
-* [a) Local Integration](#a-local-integration-1)
-* [b) BugTraq Integration](#b-bugtraq-integration-1)
+* [a) Local Integration](#a-local-integration)
+* [b) BugTraq Integration](#b-bugtraq-integration)
   * [Further BugTraq configuration](#further-bugtraq-configuration)
 
 For information about which integration method to choose, see:

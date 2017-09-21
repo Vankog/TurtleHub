@@ -17,7 +17,7 @@ downloaded on the [Release](../../releases) page.
     * want to use TurtleHub only locally without sharing the setup.
     * **and** do not plan to change the file path to the desired local repository.
     
-    **On how to setup Local Integration see [Local Integration in Setup.md](./docs/Setup.md#a-local-integration-1).**
+    **On how to setup Local Integration see [Local Integration in Setup.md](./docs/Setup.md#a-local-integration).**
 
     ### b) BugTraq Integration
     *BugTraq* is a configuration effort to integrate issue trackers into version control systems. Therefore it is 
@@ -37,10 +37,10 @@ downloaded on the [Release](../../releases) page.
     locally.
 
     **On how to setup BugTraq Integration see 
-    [BugTraq Integration in Setup.md](./docs/Setup.md#b-bugtraq-integration-1)**..
+    [BugTraq Integration in Setup.md](./docs/Setup.md#b-bugtraq-integration)**..
     
     **For further BugTraq configurations about issue linking and a fallback for users without TurtleHub, see 
-    [Further BugTraq configuration in Setup.md](#further-bugtraq-configuration).**
+    [Further BugTraq configuration in Setup.md](./docs/Setup.md#further-bugtraq-configuration).**
 
 ## Usage
 When committing, the issue chooser should appear at the top right of the dialog. Open it and let TurtleHub fetch the 
