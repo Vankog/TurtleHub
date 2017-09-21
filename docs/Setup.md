@@ -1,4 +1,4 @@
-#Table of Contents:
+# Table of Contents:
 * [a) Local Integration](#a-local-integration)
 * [b) BugTraq Integration](#b-bugtraq-integration)
   * [Further BugTraq configuration](#further-bugtraq-configuration)
