@@ -72,7 +72,7 @@ For an example, see [our own BugTraq config](../.tgitconfig):
     ### TurtleHub specific config
     provideruuid = {B2C6EC0F-8742-4792-9FDC-10635D2C118C}
     provideruuid64 = {B2C6EC0F-8742-4792-9FDC-10635D2C118B}
-    providerparams = "owner=dail8859;repository=TurtleHub;keyword=<None>;reffullrepo=True"
+    providerparams = "owner=dail8859;repository=TurtleHub;keyword=<None>;reffullrepo=True;showprsbydefault=True"
   ```
 
 
@@ -120,7 +120,7 @@ edit box appears at the top right hand side instead. There, issue numbers can be
     message = "dail8859/TurtleHub#%BUGID%"
     append = true
     
-    # Label shown next to the input field if no provider is present:
+    # Label shown next to the input field if no provider plugin is present:
     label = "Issue/Pull Request #"
     
     # The typed issue / pull request IDs must be numbers:
