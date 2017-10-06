@@ -1,10 +1,44 @@
-# Table of Contents:
+# Table of Contents:                        
+* [Which method should I choose?](#which-method-should-I-choose)
 * [a) Local Integration](#a-local-integration)
 * [b) BugTraq Integration](#b-bugtraq-integration)
   * [Further BugTraq configuration](#further-bugtraq-configuration)
 
-For information about which integration method to choose, see:
-[Setup in README.md](../README.md#setup)
+# Which method should I choose?
+#### Local Integration
+This is a simple setup for a local repository.    
+
+Use this if you...
+* want to use TurtleHub only locally without sharing the setup.
+* **and** do not plan to change the file path to the desired local repository.
+
+**On how to setup Local Integration see [a) Local Integration](#a-local-integration) below.**
+
+#### BugTraq Integration
+*BugTraq* is a configuration effort to integrate issue trackers into version control systems. Therefore it is 
+independent from TurtleHub. It is mainly known from SVN but found implementation into Git as well. It uses the Git 
+configuration hierarchy and thus can be local, shared, global or system wide. 
+
+While the general BugTraq configuration is TortoiseGit independent, the plugin-specific setup of TurtleHub 
+listed below should be able to work specifically for the whole *Tortoise-* family. Though, it was not tested for 
+TortoiseSVN or other implementations, yet. Feel free to test it and give us feedback.
+
+Use this if you...
+* want to setup a shared configuration for your project, team or system.
+* **or** want to set up a portable tracker integration. i.e. independent from your local repository path like on 
+portable mediums.
+
+Because of the benefits, we recommend this option over the *Local Integration*, even if you want to use it only 
+locally.
+
+**On how to setup BugTraq Integration see 
+[b) BugTraq Integration](#b-bugtraq-integration) below.**
+
+**For further BugTraq configurations about issue linking and a fallback for users without TurtleHub, see 
+[Further BugTraq configuration](#further-bugtraq-configuration) below.**
+
+
+
 
 # a) Local Integration
 ## Steps:
@@ -130,9 +164,9 @@ edit box appears at the top right hand side instead. There, issue numbers can be
 section.
 
 ### General BugTraq config
-* If `bugtraq.warnifnoissue` es enabled, it checks your current commit for issue numbers and warns you if you don't 
-provide one when committing. It checks messages according the RegEx of the `bugtraq.logregex` property. If not present 
-it checks against `bugtraq.message`.
+* If `bugtraq.warnifnoissue` is enabled, it checks your current commit for issue numbers and warns you if you don't 
+provide one when committing. It checks messages according to the RegEx of the `bugtraq.logregex` property. If not 
+present it checks against `bugtraq.message`.
   ```
   [bugtraq]
     ### general BugTraq config ###

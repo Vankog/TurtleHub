@@ -7,45 +7,41 @@ downloaded on the [Release](../../releases) page.
 **Note:** This project is not affiliated with or endorsed by GitHub, Inc.
 
 ## Setup
-1. Obviously, [TortoiseGit](https://tortoisegit.org/) (and therefore Git) must be installed. 
-1. Install TurtleHub with the setup file suitable for your system at the given default location.
-1. Integrate TurtleHub with your project. There are two ways to do this:
-    ### a) Local Integration
-    This is a simple setup for a local repository.
+1. Obviously, [TortoiseGit](https://tortoisegit.org/) (and therefore [Git](https://git-scm.com)) must be installed. 
+1. Install TurtleHub with the [setup file suitable for your system](../../releases) at the predetermined default 
+location.
+1. Integrate TurtleHub with your project.  
+There are two ways: *Local Integration* and *BugTraq Integration*.  
+**For information about which method to choose and detailed information about the integration methods and features, see 
+the [Setup.md](/docs/Setup.md).**  
+Following below is a Quick Start, though:  
+    ### Quick Start - Integration
+    1. Open the context menu and go to  
+    `TortoiseGit > Settings > Issue Tracker Integration`.
+    1. `Add...`: TurtleHub should show up under the `Providers` dropdown menu.
+    1. `Working Tree Path`: set to the directory of a local git repository.
+    1. `Options`: set TurtleHub's **Parameters**:
+        1. Add `owner` and `repository name` located on GitHub. 
+        1. `keyword`: indicates the prefix TurtleHub uses when you choose and insert issues into the log message. 
+        It is completely customizable and ommittable.  
+            ![TH-options](/docs/img/TH-options.png "Options Dialog")
+        1. `Reference Full Repository Name`: This creates issue references in the style of `owner/repository#1234` 
+        instead of `#1234`.  
+            ![TH-options-external-repo](/docs/img/TH-options-external-repo.png "Referencing whole Repository")
+        1. `Show Pull Requests by Default`: On *disabled*, TurtleHub will by default only show issues from the 
+        tracker without any pull requests.  
+        On *enabled*, TurtleHub will **also** show pull requests alongside issues.
 
-    Use this if you...
-    * want to use TurtleHub only locally without sharing the setup.
-    * **and** do not plan to change the file path to the desired local repository.
-    
-    **On how to setup Local Integration see [Local Integration in Setup.md](./docs/Setup.md#a-local-integration).**
-
-    ### b) BugTraq Integration
-    *BugTraq* is a configuration effort to integrate issue trackers into version control systems. Therefore it is 
-    independent from TurtleHub. It is mainly known from SVN but found integration into Git as well. It uses the Git 
-    configuration hierarchy and thus can be local, shared, global or system wide. 
-
-    While the general BugTraq configuration is TortoiseGit independent, the plugin-specific setup of TurtleHub 
-    listed below should be able to work specifically for the whole *Tortoise-* family. Though, it was not tested for 
-    TortoiseSVN or other implementations, yet. Feel free to test it and give us feedback.
-
-    Use this if you...
-    * want to setup a shared configuration for your project or system.
-    * **or** want to set up a portable tracker integration. i.e. independently from your local repository path like on 
-    portable mediums.
-    
-    Because of the benefits, we recommend this option over the *Local Integration*, even if you want to use it only 
-    locally.
-
-    **On how to setup BugTraq Integration see 
-    [BugTraq Integration in Setup.md](./docs/Setup.md#b-bugtraq-integration)**..
-    
-    **For further BugTraq configurations about issue linking and a fallback for users without TurtleHub, see 
-    [Further BugTraq configuration in Setup.md](./docs/Setup.md#further-bugtraq-configuration).**
+    **Advanced integration instructions with detailed information about the features can be found at the 
+    [Setup.md](/docs/Setup.md).**
 
 ## Usage
 When committing, the issue chooser should appear at the top right of the dialog. Open it and let TurtleHub fetch the 
 issues. If you want to see pull requests, too, enable the checkbox at the bottom.
-Select your desired issues. These will be inserted into your log message.
+Select your desired issues. These will be inserted into your log message.  
+
+To also enable the creation of clickable URL-links on issue numbers in the log, you need to setup some 
+[Further BugTraq configuration](/docs/Setup.md#further-bugtraq-configuration).
 
 ## Development
 The code is developed using Visual Studio 2015. In order to develop TurtleHub, first use one of the installers and 
