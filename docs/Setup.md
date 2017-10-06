@@ -1,5 +1,5 @@
 # Table of Contents:                        
-* [Which method should I choose?](#which-method-should-I-choose)
+* [Which method should I choose?](#which-method-should-i-choose)
 * [a) Local Integration](#a-local-integration)
 * [b) BugTraq Integration](#b-bugtraq-integration)
   * [Further BugTraq configuration](#further-bugtraq-configuration)
